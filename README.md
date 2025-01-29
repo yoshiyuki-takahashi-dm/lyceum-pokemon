@@ -13,7 +13,9 @@ forked from [ここだよ](https://github.com/webdino/lyceum-pokemon)
 
 
 一方、以下記載に従ってAWS App Runnerにデプロイして、PokeAPI動作まで確認できた。
+
 [でぷろいしたさーびす](https://ap-northeast-1.console.aws.amazon.com/apprunner/home?region=ap-northeast-1#/services/dashboard?active_tab=configuration&service_arn=arn%3Aaws%3Aapprunner%3Aap-northeast-1%3A128411914028%3Aservice%2Fpoke_yoshi_sol_dev_standard%2F1d9afcaedcb94ee3b773d0b3d10e1e18)
+
 サービス構築時にミスったポイントは以下
 
 - 構築コマンド、開始コマンド、がローカルで実行するコマンドと異なる（→デプロイ失敗）
