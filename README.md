@@ -2,8 +2,10 @@
 forked from [ここだよ](https://github.com/webdino/lyceum-pokemon)
 - KM配布PC（一般ユーザー, Ubuntu on WSL2 Win11）
 - 社内LAN環境（外部ネットワーク with ZScaler）
+
 では、ローカル環境でPokeAPI実行できない。
 以下を試してもダメだった
+
 - 証明書更新　[きーた](https://qiita.com/narikkyo/items/48c62378cbe0fa3e7685)
 - npmを信頼済にする　[すたおば](https://stackoverflow.com/questions/45884752/npm-err-code-unable-to-get-issuer-cert-locally)
 - SSL証明スキップ　export NODE_TLS_REJECT_UNAUTHORIZED=0
@@ -13,6 +15,7 @@ forked from [ここだよ](https://github.com/webdino/lyceum-pokemon)
 一方、以下記載に従ってAWS App Runnerにデプロイして、PokeAPI動作まで確認できた。
 [でぷろいしたさーびす](https://ap-northeast-1.console.aws.amazon.com/apprunner/home?region=ap-northeast-1#/services/dashboard?active_tab=configuration&service_arn=arn%3Aaws%3Aapprunner%3Aap-northeast-1%3A128411914028%3Aservice%2Fpoke_yoshi_sol_dev_standard%2F1d9afcaedcb94ee3b773d0b3d10e1e18)
 サービス構築時にミスったポイントは以下
+
 - 構築コマンド、開始コマンド、がローカルで実行するコマンドと異なる（→デプロイ失敗）
 - セキュリティ設定のIAMロールを自分で作ってなくて既存のからとったけどどれか迷った（→つづきからはじめられない）
 - 環境変数のNUXT_BUCKET_NAMEに自分のじゃないS3を設定した（→他人のS3データを表示）
