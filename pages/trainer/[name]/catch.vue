@@ -31,7 +31,7 @@ const onCatch = async (pokemon) => {
     body: {
       name: pokemon.name,
     },
-  }).catch((e) => e);
+  }).catch((e) => {console.log(e)});
   if (response instanceof Error) return;
   router.push(`/trainer/${route.params.name}`);
 };
